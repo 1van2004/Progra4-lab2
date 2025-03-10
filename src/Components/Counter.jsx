@@ -3,13 +3,21 @@ export default function Counter(){
 
 const {count, IncreaceCount, DicreaseCount}= useCounter()
 
-function favoriteNumber(){
+function favoriteNumberC(){
 if (count === 4){
   return <p>Numero favorito de Carolina</p>
 }else{
   return null
 }
 }
+
+function favoriteNumberI(){
+  if (count === 7){
+    return <p>-Iván. Ey, ese es mi numero de la suerte!!</p>
+  }else{
+    return null
+  }
+  }
 
 return (
 <div className="card">
@@ -22,7 +30,8 @@ return (
         <button onClick={DicreaseCount}>
           ➖
         </button>
-        {favoriteNumber()}
+        {favoriteNumberC()}
+        {favoriteNumberI()}
       </div>
 )
 }
