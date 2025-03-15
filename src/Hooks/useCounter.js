@@ -12,10 +12,14 @@ setCount((count) => count -1)
     setCount((count) => count + 1)
   }
 
+  const Reset = () => {
+    setCount(0)
+  }
+
   useEffect(() => {
     localStorage.setItem("count", count);
 }, [count]);
 
 
-return {count, IncreaceCount, DicreaseCount}
+return {count, IncreaceCount, DicreaseCount, Reset}
 }

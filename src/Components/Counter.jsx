@@ -1,7 +1,7 @@
 import { useCounter } from "../Hooks/useCounter"
 export default function Counter(){
 
-const {count, IncreaceCount, DicreaseCount}= useCounter()
+const {count, IncreaceCount, DicreaseCount, Reset}= useCounter()
 
 
 
@@ -29,6 +29,9 @@ return (
           ➕ 
         </button>
 
+        <button onClick={Reset}>
+          Reset
+        </button>
 
         <button onClick={DicreaseCount}>
           ➖
